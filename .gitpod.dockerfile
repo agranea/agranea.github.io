@@ -19,7 +19,7 @@ ENV USER gitpod
 WORKDIR /home/gitpod
 
 RUN touch .bash_profile && \
-  curl https://nixos.org/nix/install | sh
+  curl -L https://nixos.org/nix/install | sh
 
 RUN mkdir -p /home/gitpod/.config/nixpkgs && echo '{ allowUnfree = true; }' >> /home/gitpod/.config/nixpkgs/config.nix
 
